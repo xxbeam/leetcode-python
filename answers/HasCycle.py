@@ -1,9 +1,9 @@
 # 141.环形链表
-import listNode
+import ListNode
 
 
 class Solution:
-    def hasCycle(self, head: listNode.ListNode) -> bool:
+    def hasCycle(self, head: ListNode.ListNode) -> bool:
         fast = head
         while fast is not None and fast.next is not None:
             fast = fast.next.next

@@ -1,8 +1,8 @@
 # 19. 删除链表的倒数第 N 个结点
-import listNode
+import ListNode
 
 class Solution:
-    def removeNthFromEnd(self, head: listNode.ListNode, n: int) -> listNode.ListNode:
+    def removeNthFromEnd(self, head: ListNode.ListNode, n: int) -> ListNode.ListNode:
         fast = head
         slow = head
         while n > 0:
