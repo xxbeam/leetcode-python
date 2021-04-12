@@ -3,6 +3,7 @@ import functools
 
 
 class Solution:
+
     def largestNumber(self, nums: list[int]) -> str:
         arr = []
         for i in nums:
