@@ -1,4 +1,4 @@
-# 面试题 16.25. LRU 缓存
+# 146. LRU 缓存机制
 
 class LRUCache:
     class Node:
