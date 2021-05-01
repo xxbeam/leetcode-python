@@ -13,12 +13,12 @@ class Solution:
         count = 0
         for i in employees:
             map[i.id] = i
-            if i.id == id:
-                queue.append(map.get(id))
+
+        queue.append(id)
 
         while queue:
-            employees = queue.pop()
-            count += employees.importance
-            for i in employees.subordinates:
-                queue.append(map.get(i))
+            next_id = queue.pop()
+            employer = map.get(next_id)
+            count += employer.importance
+            queue += employer.subordinates
         return count
