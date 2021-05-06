@@ -22,7 +22,7 @@ class LRUCache:
             node = self.lru_map.get(key)
             # 前后节点更新
             self.pop(node)
-            # 将末尾节点移至最前面
+            # 将节点移至最前面
             self.push_head(node)
             return node.value
         else:
@@ -42,7 +42,7 @@ class LRUCache:
                 self.remove_tail()
             else:
                 self.size += 1
-        # 将末尾节点移至最前面
+        # 将节点移至最前面
         self.push_head(node)
         self.lru_map[key] = node
 
