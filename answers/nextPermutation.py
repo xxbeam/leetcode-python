@@ -4,7 +4,9 @@
 class Solution:
     def nextPermutation(self, nums: list[int]) -> None:
         """
-        Do not return anything, modify nums in-place instead.
+        从后向前，找到第一个非递减的数位置i，[i+1,len]中的数都是递减的
+        然后再>i的数中从后向前找到第一个比nums[i]要大的数，替换
+        然后倒序[i+1,len]
         """
         i = len(nums)-2
         while i > 0 and nums[i+1] <= nums[i]:
